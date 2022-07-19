@@ -1,3 +1,5 @@
+const userChoice = document.getElementById("usersChoice").value;
+
 const getComputerChoice = () => {
     let compChoice = Math.random();
 
@@ -15,31 +17,23 @@ let playerSelection = prompt();
 let computerSelection = getComputerChoice();
 
 const gameRound = (playerSelection, computerSelection) => {
-    let gameStarted = true;
-
-    switch(gameStarted) {
-        case playerSelection == "rock" && computerSelection == "rock" || playerSelection == "paper" && computerSelection == "paper" || playerSelection == "scissors" && computerSelection == "scissors":
+    if(playerSelection === "rock" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "paper" || playerSelection === "scissors" && computerSelection === "scissors") {
             return "It's a tie!!!";
-            break;
-        case playerSelection == "rock" && computerSelection == "paper":
+    }  else if(playerSelection === "rock" && computerSelection === "paper")  {
             return "Computer wins!!!";
-            break;
-        case playerSelection == "rock" && computerSelection == "scissors":
+    }  else if(playerSelection === "rock" && computerSelection === "scissors")  {
             return "You win!!!";
-            break;
-        case playerSelection == "paper" && computerSelection == "scissors":
-            return "Computer wins!!!"
-            break;
-        case playerSelection == "paper" && computerSelection == "rock":
-            return "You win!!!"
-            break;
-        case playerSelection == "scissors" && computerSelection == "rock":
-            return "Computer wins!!!"
-            break;
-        case playerSelection == "scissors" && computerSelection == "paper":
-            return "You win!!!"
+    }  else if(playerSelection === "paper" && computerSelection === "scissors")  {
+            return "Computer wins!!!";
+    }  else if(playerSelection === "paper" && computerSelection === "rock")  {
+            return "You win!!!";
+    }  else if(playerSelection === "scissors" && computerSelection === "rock")  {
+            return "Computer wins!!!";
+    }  else if(playerSelection === "scissors" && computerSelection === "paper")  {
+            return "You win!!!";
+    }  else {
+        return "Winner undecided";
     }
-
 }
 
 const game = () => {
