@@ -1,12 +1,26 @@
-const gameRound = (playerSelection, computerSelection) => {
-    return "You win! paper beats rock";
-}
-
 const getComputerChoice = () => {
     let compChoice = Math.random();
+
+    if(compChoice > 0.5) {
+        return "Rock";
+    } else if(compChoice < 0.5) {
+        return "scissors";
+    } else if(compChoice == 0) {
+        return "paper";
+    }
 }
 
-let playerSelection = "rock";
+let playerSelection = prompt();;
 let computerSelection = getComputerChoice();
 
-console.log(gameRound(playerSelection));
+const gameRound = (playerSelection, computerSelection) => {
+    if(playerSelection)
+}
+
+const game = () => {
+    for(let i = 0; i < 5; i++) {
+        return gameRound();
+    }
+}
+
+console.log(game())
