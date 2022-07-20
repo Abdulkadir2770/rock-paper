@@ -11,11 +11,6 @@ const getComputerChoice = () => {
     }
 }
 
-// prompts the user to enter rock, paper or scissors
-let playerSelection = prompt();
-// This calls the computer to make a choicec
-let computerSelection = getComputerChoice();
-
 // the logic that decides who wins and loses
 const gameRound = (playerSelection, computerSelection) => {
     if(playerSelection === "rock" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "paper" || playerSelection === "scissors" && computerSelection === "scissors") {
@@ -38,10 +33,11 @@ const gameRound = (playerSelection, computerSelection) => {
 }
 
 // the function that begins the game
-const game = () => {
-    for(let i = 0; i < 5; i++) {
-        return gameRound(playerSelection, computerSelection);
-    }
-}
+for(let i = 0; i < 5; i++) {
+    
+    // prompts the user & computer to pick rock, paper or scissors
+    let playerSelection = prompt();
+    let computerSelection = getComputerChoice();
 
-console.log(game());
+    console.log(gameRound(playerSelection, computerSelection));
+}
