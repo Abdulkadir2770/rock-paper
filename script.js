@@ -33,11 +33,11 @@ const gameRound = (playerSelection, computerSelection) => {
 }
 
 // the function that begins the game
-for(let i = 0; i < 5; i++) {
+// for(let i = 0; i < 5; i++) {
     
-    // prompts the user & computer to pick rock, paper or scissors
-    let playerSelection = prompt();
-    let computerSelection = getComputerChoice();
+//     // prompts the user & computer to pick rock, paper or scissors
+//     let playerSelection = prompt();
+//     let computerSelection = getComputerChoice();
 
-    console.log(gameRound(playerSelection, computerSelection));
-}
+//     console.log(gameRound(playerSelection, computerSelection));
+// }
