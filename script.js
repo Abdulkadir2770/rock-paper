@@ -1,3 +1,10 @@
+const display = document.getElementById("display");
+const rock = document.getElementById("rock").innerHTML;
+const paper = document.getElementById("paper").innerHTML;
+const scissors =  document.getElementById("scissors").innerHTML;
+
+console.log(display, rock, paper, scissors);
+
 // a function that determines what the computer's choice is
 const getComputerChoice = () => {
     let compChoice = Math.random();
