@@ -1,5 +1,4 @@
-const userChoice = document.getElementById("usersChoice").value;
-
+// a function that determines what the computer's choice is
 const getComputerChoice = () => {
     let compChoice = Math.random();
 
@@ -12,10 +11,11 @@ const getComputerChoice = () => {
     }
 }
 
-
+// prompts the user to enter rock, paper or scissors
 let playerSelection = prompt();
 let computerSelection = getComputerChoice();
 
+// the logic that decides who wins and loses
 const gameRound = (playerSelection, computerSelection) => {
     if(playerSelection === "rock" && computerSelection === "rock" || playerSelection === "paper" && computerSelection === "paper" || playerSelection === "scissors" && computerSelection === "scissors") {
             return "It's a tie!!!";
@@ -36,9 +36,10 @@ const gameRound = (playerSelection, computerSelection) => {
     }
 }
 
+// the function that begins the game
 const game = () => {
     for(let i = 0; i < 5; i++) {
-        return gameRound();
+        return gameRound(playerSelection, computerSelection);
     }
 }
 
