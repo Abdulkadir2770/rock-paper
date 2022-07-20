@@ -13,6 +13,7 @@ const getComputerChoice = () => {
 
 // prompts the user to enter rock, paper or scissors
 let playerSelection = prompt();
+// This calls the computer to make a choicec
 let computerSelection = getComputerChoice();
 
 // the logic that decides who wins and loses
