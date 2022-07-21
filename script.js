@@ -1,8 +1,22 @@
 const display = document.getElementById("display");
-const choice = document.querySelectorAll("choices");
+const rock = document.getElementById("rock");
+const paper = document.getElementById("paper");
+const scissors = document.getElementById("scissors");
+const playerOption = [rock, paper, scissors];
+const computerOption = ["rock", "paper", "scissors"];
 
 
-console.log(display, rock, paper, scissors);
+// rock.addEventListener("click", speak);
+// paper.addEventListener("click", speak);
+// scissors.addEventListener("click", speak);
+
+console.log(display, button);
+
+button.forEach(element => {
+    console.log(element);
+});
+
+
 
 // a function that determines what the computer's choice is
 const getComputerChoice = () => {
@@ -48,6 +62,3 @@ const gameRound = (playerSelection, computerSelection) => {
 //     console.log(gameRound(playerSelection, computerSelection));
 // }
 
-choice.forEach((element) => {
-    
-});
