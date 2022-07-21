@@ -1,7 +1,6 @@
 const display = document.getElementById("display");
-const rock = document.getElementById("rock").innerHTML;
-const paper = document.getElementById("paper").innerHTML;
-const scissors =  document.getElementById("scissors").innerHTML;
+const choice = document.querySelectorAll("choices");
+
 
 console.log(display, rock, paper, scissors);
 
@@ -48,3 +47,7 @@ const gameRound = (playerSelection, computerSelection) => {
 
 //     console.log(gameRound(playerSelection, computerSelection));
 // }
+
+choice.forEach((element) => {
+    
+});
