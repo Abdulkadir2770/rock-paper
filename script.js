@@ -5,15 +5,10 @@ const scissors = document.getElementById("scissors");
 const playerOption = [rock, paper, scissors];
 const computerOption = ["rock", "paper", "scissors"];
 
-
-// rock.addEventListener("click", speak);
-// paper.addEventListener("click", speak);
-// scissors.addEventListener("click", speak);
-
-console.log(display, button);
-
-button.forEach(element => {
-    console.log(element);
+playerOption.forEach(element => {
+    element.addEventListener("click", () => {
+        display.innerHTML = element.innerHTML;
+    })
 });
 
 
