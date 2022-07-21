@@ -5,13 +5,6 @@ const scissors = document.getElementById("scissors");
 const playerOption = [rock, paper, scissors];
 const computerOption = ["rock", "paper", "scissors"];
 
-playerOption.forEach(element => {
-    element.addEventListener("click", () => {
-        display.innerHTML = element.innerHTML;
-    })
-});
-
-
 
 // a function that determines what the computer's choice is
 const getComputerChoice = () => {
@@ -47,13 +40,19 @@ const gameRound = (playerSelection, computerSelection) => {
     }
 }
 
-// the function that begins the game
-// for(let i = 0; i < 5; i++) {
-    
-//     // prompts the user & computer to pick rock, paper or scissors
-//     let playerSelection = prompt();
-//     let computerSelection = getComputerChoice();
 
-//     console.log(gameRound(playerSelection, computerSelection));
-// }
+let playerSelection = playerOption.forEach(element => {
+    element.addEventListener("click", () => {
+        return element.innerHTML;
+    })
+});
+
+// the function that begins the game
+for(let i = 0; i < 5; i++) {
+    
+    // prompts the user & computer to pick rock, paper or scissors
+    let computerSelection = getComputerChoice();
+    display.innerHTML = computerSelection; 
+    display.innerHTML = gameRound(playerSelection, computerSelection);
+}
 
