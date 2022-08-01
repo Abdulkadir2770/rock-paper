@@ -45,7 +45,7 @@ const gameRound = (playerSelection, computerSelection) => {
 
 
 window.addEventListener("load", () => {
-    display.innerHTML = "Rock, Paper or Scissors";
+    display.innerHTML = "Choose your option!";
 })
 
 let game = playerOption.forEach(element => {
