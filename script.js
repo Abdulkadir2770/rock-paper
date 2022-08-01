@@ -8,16 +8,19 @@ const computerOption = ["rock", "paper", "scissors"];
 
 // a function that determines what the computer's choice is
 const getComputerChoice = () => {
-    let compChoice = Math.random();
+    let compChoice = Math.random() * 3;
 
-    if(compChoice > 0.5) {
-        return "Rock";
-    } else if(compChoice < 0.5) {
+    if(compChoice < 1) {
+        return "rock";
+    } else if(compChoice < 2) {
         return "scissors";
-    } else if(compChoice == 0) {
+    } else if(compChoice < 3) {
         return "paper";
     }
 }
+
+let computer = getComputerChoice();
+console.log(computer);
 
 // the logic that decides who wins and loses
 const gameRound = (playerSelection, computerSelection) => {
@@ -41,18 +44,18 @@ const gameRound = (playerSelection, computerSelection) => {
 }
 
 
-let playerSelection = playerOption.forEach(element => {
+window.addEventListener("load", () => {
+    display.innerHTML = "Rock, Paper or Scissors";
+})
+
+let game = playerOption.forEach(element => {
     element.addEventListener("click", () => {
-        return element.innerHTML;
+        console.log(element.innerHTML);
+        display.innerHTML = gameRound(element, computer);
     })
 });
 
 // the function that begins the game
 for(let i = 0; i < 5; i++) {
-    
-    // prompts the user & computer to pick rock, paper or scissors
-    let computerSelection = getComputerChoice();
-    display.innerHTML = computerSelection; 
-    display.innerHTML = gameRound(playerSelection, computerSelection);
+    game;
 }
-
