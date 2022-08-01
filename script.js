@@ -1,9 +1,16 @@
+/* retrieving html elements*/
 const display = document.getElementById("display");
 const rock = document.getElementById("rock");
 const paper = document.getElementById("paper");
 const scissors = document.getElementById("scissors");
 const playerOption = [rock, paper, scissors];
 const computerOption = ["rock", "paper", "scissors"];
+const pScore = document.getElementById("playerScore");
+const cScore = document.getElementById("computerScore");
+
+/* verifying the player and computer scores*/
+let playerScore = 1;
+let computerScore = 1;
 
 
 // a function that determines what the computer's choice is
