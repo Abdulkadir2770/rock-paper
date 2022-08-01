@@ -41,17 +41,29 @@ const gameRound = (playerSelection, computerSelection) => {
             cScore.innerHTML = computerScore;
             return "It's a tie!!!";
     }  else if(playerSelection === "rock" && computerSelection === "paper")  {
-            return "Computer wins!!!";
+            return "You lose!!!";
+            cScore.innerHTML = cScore;
+            cScore++;
     }  else if(playerSelection === "rock" && computerSelection === "scissors")  {
             return "You win!!!";
+            pScore.innerHTML = pScore;
+            pScore++;
     }  else if(playerSelection === "paper" && computerSelection === "scissors")  {
-            return "Computer wins!!!";
+            return "You lose!!!";
+            cScore.innerHTML = cScore;
+            cScore++;
     }  else if(playerSelection === "paper" && computerSelection === "rock")  {
             return "You win!!!";
+            pScore.innerHTML = pScore;
+            pScore++;
     }  else if(playerSelection === "scissors" && computerSelection === "rock")  {
-            return "Computer wins!!!";
+            return "You lose!!!";
+            cScore.innerHTML = cScore;
+            cScore++;
     }  else if(playerSelection === "scissors" && computerSelection === "paper")  {
             return "You win!!!";
+            pScore.innerHTML = pScore;
+            pScore++;
     }  else {
         return "Winner undecided";
     }
@@ -62,19 +74,6 @@ let game = () => {
     playerOption.forEach(element => {
         // event listener for when the button is clicked
         element.addEventListener("click", () => {
-            console.log(element);
-
-            if(element.id == "rock") {
-                console.log("Element is rock");
-            } else if (element.id == "paper") {
-                console.log("Element is paper");
-            } else if (element.id == "scissors") {
-                console.log("Element is scissors");
-            } else {
-                console.log("Option not found");
-            }
-
-
             display.innerHTML = gameRound(element.id, computer);
         })
     })
