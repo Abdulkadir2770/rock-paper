@@ -64,10 +64,18 @@ let game = () => {
         element.addEventListener("click", () => {
             console.log(element);
 
-            if(element == "rock") {
+            if(element.id == "rock") {
                 console.log("Element is rock");
+            } else if (element.id == "paper") {
+                console.log("Element is paper");
+            } else if (element.id == "scissors") {
+                console.log("Element is scissors");
+            } else {
+                console.log("Option not found");
             }
-            display.innerHTML = gameRound(element, computer);
+
+
+            display.innerHTML = gameRound(element.id, computer);
         })
     })
 }
